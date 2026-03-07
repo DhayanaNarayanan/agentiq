@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import os
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, END
@@ -7,7 +6,6 @@ from data_analyst_agent import build_analyst_agent
 from research_agent import build_research_agent
 from code_agent import build_code_agent
 
-load_dotenv()
 
 # ── State ─────────────────────────────────────────────────────
 class OrchestratorState(TypedDict):
@@ -20,7 +18,7 @@ class OrchestratorState(TypedDict):
 # ── LLM ───────────────────────────────────────────────────────
 llm = ChatGroq(
     model="llama-3.3-70b-versatile",
-    api_key=os.getenv("GROQ_API_KEY")
+    api_key=os.environ.get("GROQ_API_KEY")
 )
 
 # ── Node 1: Understand & Route the Task ───────────────────────
