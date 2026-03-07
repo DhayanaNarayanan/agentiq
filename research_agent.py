@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -6,7 +5,6 @@ from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, END
 from typing import TypedDict, Optional, List
 
-load_dotenv()
 
 # ── State ─────────────────────────────────────────────────────
 class ResearchState(TypedDict):

@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import os
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, END
@@ -6,7 +5,6 @@ from typing import TypedDict, Optional
 import subprocess
 import tempfile
 
-load_dotenv()
 
 # ── State ─────────────────────────────────────────────────────
 class CodeState(TypedDict):

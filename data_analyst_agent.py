@@ -1,11 +1,10 @@
-from dotenv import load_dotenv
+
 import os
 import pandas as pd
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, END
 from typing import TypedDict, Optional
 
-load_dotenv()
 
 # ── State: what flows between agents ──────────────────────────
 class AnalystState(TypedDict):

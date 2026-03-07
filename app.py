@@ -2,9 +2,6 @@ import streamlit as st
 import os
 import tempfile
 import pandas as pd
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # ── Page Config ───────────────────────────────────────────────
 st.set_page_config(
