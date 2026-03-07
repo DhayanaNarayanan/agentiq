@@ -1,0 +1,110 @@
+
+=======================================================
+TASK: Write code to visualize data using matplotlib charts
+HANDLED BY: CODE AGENT
+=======================================================
+
+
+=======================================================
+GENERATED CODE
+=======================================================
+# Import necessary libraries
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# Define a main function to encapsulate the code
+def main():
+    # Create a simple dataset for demonstration
+    # Generate x values
+    x = np.arange(1, 11)
+    
+    # Generate y values (squares of x)
+    y = x ** 2
+    
+    # Create a pandas DataFrame for better data management
+    df = pd.DataFrame({
+        'X': x,
+        'Y': y
+    })
+    
+    # Print the DataFrame for visibility
+    print("Dataset:")
+    print(df)
+    
+    # Create a line chart
+    plt.figure(figsize=(10, 6))  # Set chart size
+    plt.plot(df['X'], df['Y'], marker='o')  # Plot with markers
+    plt.title('Line Chart: Y = X^2')  # Set chart title
+    plt.xlabel('X')  # Set x-axis label
+    plt.ylabel('Y')  # Set y-axis label
+    plt.grid(True)  # Show grid for better readability
+    plt.show()  # Display the chart
+    
+    # Create a bar chart
+    plt.figure(figsize=(10, 6))  # Set chart size
+    plt.bar(df['X'], df['Y'], color='skyblue')  # Plot bars
+    plt.title('Bar Chart: Y = X^2')  # Set chart title
+    plt.xlabel('X')  # Set x-axis label
+    plt.ylabel('Y')  # Set y-axis label
+    plt.show()  # Display the chart
+    
+    # Create a scatter plot
+    plt.figure(figsize=(10, 6))  # Set chart size
+    plt.scatter(df['X'], df['Y'], color='red')  # Plot points
+    plt.title('Scatter Plot: Y = X^2')  # Set chart title
+    plt.xlabel('X')  # Set x-axis label
+    plt.ylabel('Y')  # Set y-axis label
+    plt.show()  # Display the chart
+
+# Call the main function to execute the code
+if __name__ == "__main__":
+    main()
+
+=======================================================
+TEST OUTPUT
+=======================================================
+Dataset:
+    X    Y
+0   1    1
+1   2    4
+2   3    9
+3   4   16
+4   5   25
+5   6   36
+6   7   49
+7   8   64
+8   9   81
+9  10  100
+
+
+=======================================================
+EXPLANATION
+=======================================================
+**Introduction to Python Code Explanation**
+
+### 1. WHAT IT DOES
+This Python code generates a simple dataset of x and y values, where y is the square of x, and then creates three different types of visualizations (line chart, bar chart, and scatter plot) using the matplotlib library to display the relationship between x and y.
+
+### 2. HOW IT WORKS
+Here's a step-by-step explanation of how the code works:
+* **Importing Libraries**: The code starts by importing three important libraries: matplotlib (for creating visualizations), numpy (for numerical operations), and pandas (for data management).
+* **Creating a Dataset**: It then generates a simple dataset with x values ranging from 1 to 10 and corresponding y values, which are the squares of the x values.
+* **Organizing Data**: The dataset is organized into a pandas DataFrame, which is a table-like structure that makes it easy to manage and manipulate data.
+* **Printing the Dataset**: The code prints the dataset to the console so you can see the data.
+* **Creating Visualizations**: The code then creates three different types of visualizations: a line chart, a bar chart, and a scatter plot. Each visualization is customized with a title, labels for the x and y axes, and a grid to make it easier to read.
+* **Displaying the Visualizations**: Finally, the code displays each visualization using the `plt.show()` function.
+
+### 3. KEY CONCEPTS USED
+This code teaches several important Python concepts, including:
+* **Importing Libraries**: How to import external libraries and use their functions and classes.
+* **Data Structures**: How to work with lists, numpy arrays, and pandas DataFrames to store and manipulate data.
+* **Visualization**: How to use the matplotlib library to create different types of visualizations, such as line charts, bar charts, and scatter plots.
+* **Functions**: How to define and call a main function to encapsulate the code and make it easier to execute.
+
+### 4. HOW TO MODIFY IT
+Here are two ways to extend or change the code:
+* **Add More Data**: You could add more data to the dataset by generating more x and y values or by reading data from a file. For example, you could use numpy's `linspace` function to generate 100 x values between 1 and 10, and then calculate the corresponding y values.
+* **Customize the Visualizations**: You could customize the visualizations by changing the colors, fonts, and styles used in the plots. For example, you could use the `plt.style.use()` function to change the overall style of the plots, or you could use the `plt.xlabel()` and `plt.ylabel()` functions to change the font sizes and styles of the axis labels.
+    
+    

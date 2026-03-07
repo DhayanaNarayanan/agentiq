@@ -1,0 +1,11 @@
+langchain-groq
+langchain
+langgraph
+streamlit
+requests
+beautifulsoup4
+pandas
+numpy
+python-dotenv
+langchain-community
+
